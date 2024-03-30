@@ -13,7 +13,7 @@
 
   <!-- Theme: Simple Dark -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
-
+  <link rel="stylesheet" type="text/css" href="_styles/autonumber.css" />
 </head>
 
 <body>
@@ -30,11 +30,11 @@
       autoHeader: true,
       loadNavbar: true,
       mergeNavbar: true,
-      maxLevel: 2,
+      maxLevel: 3,
       subMaxLevel: 3,
-      coverpage: ['/'],
       // 404 page
       notFoundPage: true,
+
 
       // complete configuration parameters
       search: {
@@ -58,8 +58,23 @@
         querySelector: ".mermaid",
       },
 
+      markdown: {
+        renderer: {
+          image: function(href, title, text) {
+                    var image_html = this.origin.image.apply(this, arguments)
+                    return '<figure>' + image_html + '<figcaption>' + text +
+                        '</figcaption></figure>'
+          }
+        }
+      }
     }
   </script>
+
+  <style>
+    figure {
+      text-align: center
+    }
+  </style>
 
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
 
