@@ -1,6 +1,6 @@
 ![](/img/favicon.png ':size=120')
 
-> 核材料腐蚀性能研究指南 <sup>2024</sup>
+> 核材料腐蚀性能研究指南 <sup>2024.03</sup>
 
 # **NuMat Guidline**
 
